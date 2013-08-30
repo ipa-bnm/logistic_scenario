@@ -1,0 +1,19 @@
+target_frame: 'arm_ee_link'
+goal_pose:
+  header:
+    seq: 0
+    stamp:
+      secs: 0
+      nsecs: 0
+    frame_id: 'cob_marker_tag'
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.2
+    orientation:
+      x: 0.707106
+      y: 0.0
+      z: -0.707106
+      w: 0.0
+linVel: 0.0

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  <!-- upload parameters -->
+
+  <rosparam command="load" ns="/simple_pnp/MovePTPGoal" file="$(find logistic_scenario)/config/MovePTPGoal.yaml"/>
+  <rosparam command="load" ns="/simple_pnp/CobMarkerGoal" file="$(find logistic_scenario)/config/CobMarkerGoal.yaml"/>
+  <rosparam command="load" ns="/simple_pnp/MoveStartGoal" file="$(find logistic_scenario)/config/MoveStartGoal.yaml"/>
+  <rosparam command="load" ns="/simple_pnp/MoveBaseHomeGoal" file="$(find logistic_scenario)/config/MoveBaseHomeGoal.yaml"/>
+  <rosparam command="load" ns="/simple_pnp/MoveBaseShelfGoal" file="$(find logistic_scenario)/config/MoveBaseShelfGoal.yaml"/>
+  
+  <node name="logistic_scenario_app" pkg="logistic_scenario" type="simple_pnp_nongen.py" output="screen"/>
+
+
+
+
+
+
+</launch>

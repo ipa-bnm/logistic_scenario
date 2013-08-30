@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- start robot -->
+  <!--include file="$(find cob_bringup)/launch/robot.launch"/-->
+
+  <!-- start manipulation -->
+  <include file="$(find cob_moveit_config)/launch/move_group.launch">
+  </include>
+
+  <include file="$(find cob_navigation_global)/launch/2dnav_ros_eband.launch" />
+  
+  <node name="primitive_server" pkg="prace_primitives" type="ManipulatorPrimitiveServer" output="screen"/>
+
+  <include file="$(find cob_marker)/ros/launch/marker.launch" />
+
+
+
+  <!-- upload parameters -->
+
+
+</launch>
