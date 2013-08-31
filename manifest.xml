@@ -10,6 +10,7 @@
   <url>http://ros.org/wiki/logistic_scenario</url>
   <depend package="roscpp"/>
   <depend package="std_msgs"/>
+  <depend package="control_msgs"/>
   <depend package="rospy"/>
   <depend package="move_base_msgs"/>
   <depend package="smach"/>

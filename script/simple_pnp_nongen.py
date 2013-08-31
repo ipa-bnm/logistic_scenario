@@ -23,23 +23,15 @@ class simple_pnp_impl:
     self.cob_marker_goal = DetectObjectsGoal()
     self.MovePTP_goal = MoveLinGoal()
     self.MoveStart_goal = MoveLinGoal()
-    self.MoveJointSpace_goal = FollowJointTrajectoryGoal()
     self.MoveBaseHome_goal = MoveBaseActionGoal()
     self.MoveBaseShelf_goal = MoveBaseActionGoal()
    
     # protected region initCode on begin #
-    print rospy.get_param('/simple_pnp/MovePTPGoal')
-    genpy.message.fill_message_args(self.MovePTP_goal, rospy.get_param('/simple_pnp/MovePTPGoal'))
-    print rospy.get_param('/simple_pnp/MoveStartGoal')
-    genpy.message.fill_message_args(self.MoveStart_goal, rospy.get_param('/simple_pnp/MoveStartGoal'))
-    #print rospy.get_param('/simple_pnp/MoveBaseHomeGoal')
-    #genpy.message.fill_message_args(self.MoveBaseHome_goal, {rospy.get_param('/simple_pnp/MoveBaseHomeGoal')})
-    #print rospy.get_param('/simple_pnp/MoveBaseShelfGoal')
-    #genpy.message.fill_message_args(self.MoveBaseShelf_goal, {rospy.get_param('/simple_pnp/MoveBaseShelfGoal')})
-    #print rospy.get_param('/simple_pnp/CobMarkerGoal')
-    #genpy.message.fill_message_args(self.cob_marker_goal, rospy.get_param('/simple_pnp/CobMarkerGoal'))
-    self.cob_marker_goal.object_name.data = "AUB"
-    #genpy.message.fill_message_args(self.MoveJointSpace_goal, rospy.get_param('simple_pnp/MoveJointSpace'))
+    genpy.message.fill_message_args(self.MovePTP_goal, [rospy.get_param('/simple_pnp/MovePTPGoal')])
+    genpy.message.fill_message_args(self.MoveStart_goal, [rospy.get_param('/simple_pnp/MoveStartGoal')])
+    genpy.message.fill_message_args(self.MoveBaseHome_goal, [rospy.get_param('/simple_pnp/MoveBaseHomeGoal')])
+    genpy.message.fill_message_args(self.MoveBaseShelf_goal, [rospy.get_param('/simple_pnp/MoveBaseShelfGoal')])
+    genpy.message.fill_message_args(self.cob_marker_goal, [rospy.get_param('/simple_pnp/CobMarkerGoal')])
     # protected region initCode end #
     pass
   
@@ -53,14 +45,14 @@ class simple_pnp_impl:
     sis.start()
     with sm0:
       smach.StateMachine.add('MoveStart', smach_ros.SimpleActionState('MovePTP', MoveLinAction, self.MoveStart_goal), {
+        "succeeded":"MoveBaseHome",
+      })
+      smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHome_goal), {
+        "succeeded":"MoveBaseShelf",
+      })
+      smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
         "succeeded":"DetectMarker",
       })
-      #smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHome_goal), {
-      #  "succeeded":"DetectMarker",
-      #})
-      #smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
-      #  "succeeded":"DetectMarker",
-      #})
       smach.StateMachine.add('DetectMarker', smach_ros.SimpleActionState('/cob_marker/object_detection', DetectObjectsAction, self.cob_marker_goal), {
         "succeeded":"MovePTP",
       })
