@@ -1,3 +1,5 @@
+#Generated once for configuration of goals
+#Config config/MoveLinGrasp_goal.yaml
 target_frame: 'arm_ee_link'
 goal_pose:
   header:
@@ -5,15 +7,15 @@ goal_pose:
     stamp:
       secs: 0
       nsecs: 0
-    frame_id: 'cob_marker_tag'
+    frame_id: 'arm_ee_link'
   pose:
     position:
+      x: 0.05
+      y: 0.0
+      z: 0.0
+    orientation:
       x: 0.0
       y: 0.0
-      z: 0.2
-    orientation:
-      x: 0.707106
-      y: 0.0
-      z: -0.707106
-      w: 0.0
+      z: 0.0
+      w: 1.0
 linVel: 0.0

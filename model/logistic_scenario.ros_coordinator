@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ros="http://ros/1.0" xmlns:smach="http://smach/1.0" name="logistic_scenario" author="Alexander Bubeck" rosdep="">
+  <node xsi:type="smach:SMACHStateMachine" name="logistic_scenario_app">
+    <actionclient xsi:type="smach:ActionState" name="MoveHomePTP" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveHomePTP"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveBaseHome" ActionType="move_base_msgs::MoveBase" goal="/logistic_scenario_app/MoveBaseHome"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveBaseShelf" ActionType="move_base_msgs::MoveBase" goal="/logistic_scenario_app/MoveBaseShelf"/>
+    <actionclient xsi:type="smach:ActionState" name="DetectObjects" ActionType="cob_object_detection_msgs::DetectObjects" goal="/logistic_scenario_app/DetectObjects"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveObjectPTP" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveObjectPTP"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveLinGrasp" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinGrasp"/>
+    <transitions Source="//@node.0/@initialStates.0" Target="//@node.0/@actionclient.0"/>
+    <transitions Source="//@node.0/@actionclient.0" Target="//@node.0/@actionclient.1"/>
+    <transitions Source="//@node.0/@actionclient.1" Target="//@node.0/@actionclient.2"/>
+    <transitions Source="//@node.0/@actionclient.2" Target="//@node.0/@actionclient.3"/>
+    <transitions Source="//@node.0/@actionclient.3" Target="//@node.0/@actionclient.4"/>
+    <transitions Source="//@node.0/@actionclient.4" Target="//@node.0/@actionclient.5"/>
+    <transitions Source="//@node.0/@actionclient.5" Target="//@node.0/@finalStates.0"/>
+    <finalStates/>
+    <initialStates/>
+  </node>
+  <depend>move_base_msgs</depend>
+  <depend>cob_object_detection_msgs</depend>
+  <depend>prace_primitives</depend>
+  <depend>control_msgs</depend>
+</ros:Package>

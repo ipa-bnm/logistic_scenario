@@ -1,0 +1,21 @@
+#Generated once for configuration of goals
+#Config config/MoveObjectPTP_goal.yaml
+target_frame: 'arm_ee_link'
+goal_pose:
+  header:
+    seq: 0
+    stamp:
+      secs: 0
+      nsecs: 0
+    frame_id: 'cob_marker_tag'
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: -0.05
+    orientation:
+      x: 0.0
+      y: -0.707106
+      z: 0.0
+      w: 0.707106
+linVel: 0.0

@@ -1,3 +1,5 @@
+#Generated once for configuration of goals
+#Config config/MoveHomePTP_goal.yaml
 target_frame: 'arm_ee_link'
 goal_pose:
   header:

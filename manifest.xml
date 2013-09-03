@@ -1,23 +1,23 @@
 <package>
-  <description brief="logistic_scenario">
-
-     logistic_scenario
-
-  </description>
-  <author>aub</author>
-  <license>BSD</license>
+  <description brief="logistic_scenario"></description>
+  <author>Alexander Bubeck</author>
+  <license></license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/logistic_scenario</url>
+  <url></url>
   <depend package="roscpp"/>
   <depend package="std_msgs"/>
-  <depend package="control_msgs"/>
   <depend package="rospy"/>
-  <depend package="move_base_msgs"/>
   <depend package="smach"/>
   <depend package="smach_ros"/>
-  <depend package="prace_primitives"/>
-  <depend package="cob_object_detection_msgs"/>
-
+  <depend package="dynamic_reconfigure"/>
+  	<depend package="move_base_msgs"/>
+  	<depend package="cob_object_detection_msgs"/>
+  	<depend package="prace_primitives"/>
+  	<depend package="control_msgs"/>
+  /* protected region additional manifest statements on begin */
+  /* protected region additional manifest statements end */
+  
+  
 </package>
 
 

@@ -4,13 +4,14 @@
 
   <!-- upload parameters -->
 
-  <rosparam command="load" ns="/simple_pnp/MovePTPGoal" file="$(find logistic_scenario)/config/MovePTPGoal.yaml"/>
-  <rosparam command="load" ns="/simple_pnp/CobMarkerGoal" file="$(find logistic_scenario)/config/CobMarkerGoal.yaml"/>
-  <rosparam command="load" ns="/simple_pnp/MoveStartGoal" file="$(find logistic_scenario)/config/MoveStartGoal.yaml"/>
-  <rosparam command="load" ns="/simple_pnp/MoveBaseHomeGoal" file="$(find logistic_scenario)/config/MoveBaseHomeGoal.yaml"/>
-  <rosparam command="load" ns="/simple_pnp/MoveBaseShelfGoal" file="$(find logistic_scenario)/config/MoveBaseShelfGoal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveHomePTP" file="$(find logistic_scenario)/config/MoveHomePTP_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/DetectObjects" file="$(find logistic_scenario)/config/DetectObjects_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveObjectPTP" file="$(find logistic_scenario)/config/MoveObjectPTP_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveBaseHome" file="$(find logistic_scenario)/config/MoveBaseHome_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveBaseShelf" file="$(find logistic_scenario)/config/MoveBaseShelf_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveLinGrasp" file="$(find logistic_scenario)/config/MoveLinGrasp_goal.yaml"/>
   
-  <node name="logistic_scenario_app" pkg="logistic_scenario" type="simple_pnp_nongen.py" output="screen"/>
+  <node name="logistic_scenario_app" pkg="logistic_scenario" type="logistic_scenario_app" output="screen"/>
 
 
 
