@@ -50,28 +50,28 @@ class logistic_scenario_app_impl:
 		sis = smach_ros.IntrospectionServer('logistic_scenario_app', sm0, '/logistic_scenario_app_sm')
 		sis.start()
 		with sm0:
-			smach.StateMachine.add('MoveHomePTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction), {
+			smach.StateMachine.add('MoveHomePTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction, self.MoveHomePTP_goal), {
 				"succeeded":"MoveBaseHome",
 			})
-			smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction), {
+			smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHome_goal), {
 				"succeeded":"MoveBaseShelf",
 			})
-			smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction), {
+			smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
 				"succeeded":"DetectObjects",
 			})
-			smach.StateMachine.add('DetectObjects', smach_ros.SimpleActionState('/cob_marker/object_detection', DetectObjectsAction), {
+			smach.StateMachine.add('DetectObjects', smach_ros.SimpleActionState('/cob_marker/object_detection', DetectObjectsAction, self.DetectObjects_goal), {
 				"succeeded":"MoveObjectPTP",
 			})
-			smach.StateMachine.add('MoveObjectPTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction), {
+			smach.StateMachine.add('MoveObjectPTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction, self.MoveObjectPTP_goal), {
 				"succeeded":"MoveLinGrasp",
 			})
-			smach.StateMachine.add('MoveLinGrasp', smach_ros.SimpleActionState('/MoveLin', MoveLinAction), {
+			smach.StateMachine.add('MoveLinGrasp', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinGrasp_goal), {
 				"succeeded":"MoveLinGraspUp",
 			})
-			smach.StateMachine.add('MoveLinGraspUp', smach_ros.SimpleActionState('/MoveLin', MoveLinAction), {
+			smach.StateMachine.add('MoveLinGraspUp', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinGraspUp_goal), {
 				"succeeded":"MoveLinGraspBack",
 			})
-			smach.StateMachine.add('MoveLinGraspBack', smach_ros.SimpleActionState('/MoveLin', MoveLinAction), {
+			smach.StateMachine.add('MoveLinGraspBack', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinGraspBack_goal), {
 				"succeeded":"succeeded",
 			})
 	
