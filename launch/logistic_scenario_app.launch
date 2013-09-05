@@ -12,6 +12,7 @@
   <rosparam command="load" ns="/logistic_scenario_app/MoveLinGrasp" file="$(find logistic_scenario)/config/MoveLinGrasp_goal.yaml"/>
   <rosparam command="load" ns="/logistic_scenario_app/MoveLinGraspUp" file="$(find logistic_scenario)/config/MoveLinGraspUp_goal.yaml"/>
   <rosparam command="load" ns="/logistic_scenario_app/MoveLinGraspBack" file="$(find logistic_scenario)/config/MoveLinGraspBack_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveToRobotDeck" file="$(find logistic_scenario)/config/MoveToRobotDeck_goal.yaml"/>
   
   <node name="logistic_scenario_app" pkg="logistic_scenario" type="logistic_scenario_app" output="screen"/>
 
