@@ -1,6 +1,6 @@
 #Generated once for configuration of goals
 #Config config/MoveHomePTP_goal.yaml
-target_frame: 'arm_ee_link'
+target_frame: 'gripper_link'
 goal_pose:
   header:
     seq: 0

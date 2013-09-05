@@ -1,21 +1,21 @@
 #Generated once for configuration of goals
 #Config config/MoveLinGraspUp_goal.yaml
-target_frame: 'arm_ee_link'
+target_frame: 'gripper_link'
 goal_pose:
   header:
     seq: 0
     stamp:
       secs: 0
       nsecs: 0
-    frame_id: 'arm_ee_link'
+    frame_id: 'gripper_link'
   pose:
     position:
-      x: 0.0
-      y: -0.1
+      x: 0.01
+      y: -0.12
       z: 0.0
     orientation:
       x: 0.0
       y: 0.0
       z: 0.0
-      w: 0.0
+      w: 1.0
 linVel: 0.0
