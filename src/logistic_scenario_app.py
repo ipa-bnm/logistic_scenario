@@ -44,6 +44,8 @@ class logistic_scenario_app_impl:
 		self.MoveToRobotDeck_goal = FollowJointTrajectoryGoal()
 		genpy.message.fill_message_args(self.MoveToRobotDeck_goal, [rospy.get_param('/logistic_scenario_app/MoveToRobotDeck')])
 	
+		self.MoveToNeutralFront_goal = FollowJointTrajectoryGoal()
+		genpy.message.fill_message_args(self.MoveToNeutralFront_goal, [rospy.get_param('/logistic_scenario_app/MoveToNeutralFront')])
 		# protected region initCode on begin #
         # protected region initCode end #
 		pass
@@ -53,13 +55,16 @@ class logistic_scenario_app_impl:
 		sis = smach_ros.IntrospectionServer('logistic_scenario_app', sm0, '/logistic_scenario_app_sm')
 		sis.start()
 		with sm0:
-			smach.StateMachine.add('MoveHomePTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction, self.MoveHomePTP_goal), {
-				"succeeded":"MoveBaseHome",
-			})
+			#smach.StateMachine.add('MoveHomePTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction, self.MoveHomePTP_goal), {
+			#	"succeeded":"DetectObjects",
+			#})
 			smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHome_goal), {
 				"succeeded":"MoveBaseShelf",
 			})
 			smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
+				"succeeded":"MoveToNeutralFront",
+			})
+			smach.StateMachine.add('MoveToNeutralFront', smach_ros.SimpleActionState('/arm_controller/follow_joint_trajectory/', FollowJointTrajectoryAction, self.MoveToNeutralFront_goal), {
 				"succeeded":"DetectObjects",
 			})
 			smach.StateMachine.add('DetectObjects', smach_ros.SimpleActionState('/cob_marker/object_detection', DetectObjectsAction, self.DetectObjects_goal), {
