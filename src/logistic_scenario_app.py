@@ -14,6 +14,7 @@ from prace_primitives.msg import MoveLinAction, MoveLinGoal
 from prace_primitives.msg import MoveLinAction, MoveLinGoal
 from prace_primitives.msg import MoveLinAction, MoveLinGoal
 from prace_primitives.msg import MoveLinAction, MoveLinGoal
+from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
 
 
 # protected region customHeaders on begin #
@@ -40,6 +41,8 @@ class logistic_scenario_app_impl:
 		genpy.message.fill_message_args(self.MoveLinGraspUp_goal, [rospy.get_param('/logistic_scenario_app/MoveLinGraspUp')])
 		self.MoveLinGraspBack_goal = MoveLinGoal()
 		genpy.message.fill_message_args(self.MoveLinGraspBack_goal, [rospy.get_param('/logistic_scenario_app/MoveLinGraspBack')])
+		self.MoveToRobotDeck_goal = FollowJointTrajectoryGoal()
+		genpy.message.fill_message_args(self.MoveToRobotDeck_goal, [rospy.get_param('/logistic_scenario_app/MoveToRobotDeck')])
 	
 		# protected region initCode on begin #
         # protected region initCode end #
@@ -51,14 +54,14 @@ class logistic_scenario_app_impl:
 		sis.start()
 		with sm0:
 			smach.StateMachine.add('MoveHomePTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction, self.MoveHomePTP_goal), {
+				"succeeded":"MoveBaseHome",
+			})
+			smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHome_goal), {
+				"succeeded":"MoveBaseShelf",
+			})
+			smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
 				"succeeded":"DetectObjects",
 			})
-			#smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHome_goal), {
-			#	"succeeded":"MoveBaseShelf",
-			#})
-			#smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
-			#	"succeeded":"DetectObjects",
-			#})
 			smach.StateMachine.add('DetectObjects', smach_ros.SimpleActionState('/cob_marker/object_detection', DetectObjectsAction, self.DetectObjects_goal), {
 				"succeeded":"MoveObjectPTP",
 			})
@@ -72,6 +75,9 @@ class logistic_scenario_app_impl:
 				"succeeded":"MoveLinGraspBack",
 			})
 			smach.StateMachine.add('MoveLinGraspBack', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinGraspBack_goal), {
+				"succeeded":"MoveToRobotDeck",
+			})
+			smach.StateMachine.add('MoveToRobotDeck', smach_ros.SimpleActionState('/arm_controller/follow_joint_trajectory/', FollowJointTrajectoryAction, self.MoveToRobotDeck_goal), {
 				"succeeded":"succeeded",
 			})
 	
