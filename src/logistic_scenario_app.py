@@ -51,14 +51,14 @@ class logistic_scenario_app_impl:
 		sis.start()
 		with sm0:
 			smach.StateMachine.add('MoveHomePTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction, self.MoveHomePTP_goal), {
-				"succeeded":"MoveBaseHome",
-			})
-			smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHome_goal), {
-				"succeeded":"MoveBaseShelf",
-			})
-			smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
 				"succeeded":"DetectObjects",
 			})
+			#smach.StateMachine.add('MoveBaseHome', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHome_goal), {
+			#	"succeeded":"MoveBaseShelf",
+			#})
+			#smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
+			#	"succeeded":"DetectObjects",
+			#})
 			smach.StateMachine.add('DetectObjects', smach_ros.SimpleActionState('/cob_marker/object_detection', DetectObjectsAction, self.DetectObjects_goal), {
 				"succeeded":"MoveObjectPTP",
 			})
