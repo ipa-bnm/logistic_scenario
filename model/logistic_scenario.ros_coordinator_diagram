@@ -14,7 +14,7 @@
         <styles xmi:type="notation:DescriptionStyle" xmi:id="_TyNz8RPHEeOwHtNc_jOQaw"/>
         <styles xmi:type="notation:FontStyle" xmi:id="_TyNz8hPHEeOwHtNc_jOQaw" fontName="Ubuntu"/>
         <element xmi:type="smach:FinalState" href="logistic_scenario.ros_coordinator#//@node.0/@finalStates.0"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TyNz8xPHEeOwHtNc_jOQaw" x="722" y="426"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TyNz8xPHEeOwHtNc_jOQaw" x="828" y="718"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_VDkuIBPHEeOwHtNc_jOQaw" type="3001" fontName="Ubuntu">
         <children xmi:type="notation:DecorationNode" xmi:id="_VDlVMBPHEeOwHtNc_jOQaw" type="5001"/>
@@ -59,11 +59,66 @@
       <children xmi:type="notation:Shape" xmi:id="_SGSUEBYsEeOb86bem_Upkg" type="3001" fontName="Ubuntu">
         <children xmi:type="notation:DecorationNode" xmi:id="_SGTiMBYsEeOb86bem_Upkg" type="5001"/>
         <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.8"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SGSUERYsEeOb86bem_Upkg" x="530" y="354"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SGSUERYsEeOb86bem_Upkg" x="702" y="347"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_AkNyIBb1EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_AkNyIRb1EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.9"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AkOZMBb1EeO9qcE0l8gKkQ" x="30" y="522"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_ZzZ-cBb1EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_ZzZ-cRb1EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.10"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZzZ-chb1EeO9qcE0l8gKkQ" x="226" y="522"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_kJfBcBb1EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_kJfBcRb1EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.11"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kJfBchb1EeO9qcE0l8gKkQ" x="660" y="515" width="121" height="85"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_l98BoBb1EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_l98BoRb1EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.12"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l98Bohb1EeO9qcE0l8gKkQ" x="863" y="515"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_4IZm8Bb1EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_4IZm8Rb1EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.13"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4IZm8hb1EeO9qcE0l8gKkQ" x="429" y="690"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_IOdrkBb2EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_IOdrkRb2EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.14"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IOdrkhb2EeO9qcE0l8gKkQ" x="233" y="690"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NcEY4Bb2EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_NcEY4Rb2EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.15"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NcEY4hb2EeO9qcE0l8gKkQ" x="23" y="690"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_S0E_YBb2EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_S0E_YRb2EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.16"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S0E_Yhb2EeO9qcE0l8gKkQ" x="632" y="690"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_3QTr4Bb2EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_3QTr4Rb2EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.17"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3QTr4hb2EeO9qcE0l8gKkQ" x="751" y="25"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_AhSvEBb3EeO9qcE0l8gKkQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_AhSvERb3EeO9qcE0l8gKkQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.18"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AhSvEhb3EeO9qcE0l8gKkQ" x="429" y="522"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_5LMJkBcJEeO03P0Ra0M9AQ" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_5LMJkRcJEeO03P0Ra0M9AQ" type="5001"/>
+        <element xmi:type="smach:ActionState" href="logistic_scenario.ros_coordinator#//@node.0/@actionclient.19"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5LMJkhcJEeO03P0Ra0M9AQ" x="520" y="347"/>
       </children>
     </children>
     <element xmi:type="smach:SMACHStateMachine" href="logistic_scenario.ros_coordinator#//@node.0"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HXL2oBPHEeOwHtNc_jOQaw" x="72" width="825" height="547"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HXL2oBPHEeOwHtNc_jOQaw" x="70" width="1028" height="834"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_FUqlQRPHEeOwHtNc_jOQaw"/>
   <element xmi:type="ros:Package" href="logistic_scenario.ros_coordinator#/"/>
@@ -96,14 +151,14 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_80mMMxPHEeOwHtNc_jOQaw" points="[60, -9, -75, 0]$[108, -17, -27, -8]"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_80oBYBPHEeOwHtNc_jOQaw" id="(0.225,0.3875)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_A4gtkBPIEeOwHtNc_jOQaw" type="4001" source="_1HfWkBPHEeOwHtNc_jOQaw" target="_9jPa4BPHEeOwHtNc_jOQaw">
+  <edges xmi:type="notation:Edge" xmi:id="_A4gtkBPIEeOwHtNc_jOQaw" type="4001" source="_3QTr4Bb2EeO9qcE0l8gKkQ" target="_9jPa4BPHEeOwHtNc_jOQaw">
     <children xmi:type="notation:DecorationNode" xmi:id="_A4hUoBPIEeOwHtNc_jOQaw" type="6001">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_A4hUoRPIEeOwHtNc_jOQaw" x="-16" y="21"/>
     </children>
     <styles xmi:type="notation:RoutingStyle" xmi:id="_A4gtkRPIEeOwHtNc_jOQaw"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_A4gtkhPIEeOwHtNc_jOQaw" fontName="Ubuntu"/>
     <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.3"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A4gtkxPIEeOwHtNc_jOQaw" points="[0, 40, 522, -86]$[0, 92, 522, -34]$[-28, 92, 494, -34]$[-516, 92, 6, -34]$[-516, 116, 6, -10]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A4gtkxPIEeOwHtNc_jOQaw" points="[0, 40, 724, -91]$[0, 94, 724, -37]$[-129, 94, 595, -37]$[-724, 94, 0, -37]$[-724, 121, 0, -10]"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A4lmEBPIEeOwHtNc_jOQaw" id="(0.23140495867768596,0.11764705882352941)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_BWVSABPIEeOwHtNc_jOQaw" type="4001" source="_9jPa4BPHEeOwHtNc_jOQaw" target="__FmlgBPHEeOwHtNc_jOQaw">
@@ -143,22 +198,127 @@
     <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.7"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NHl8sxSQEeO2WIW58ID4KA" points="[0, 43, 339, -111]$[0, 79, 339, -75]$[-339, 79, 0, -75]$[-339, 114, 0, -40]"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_eLoVQBYsEeOb86bem_Upkg" type="4001" source="_sRQ1UBSOEeO2WIW58ID4KA" target="_SGSUEBYsEeOb86bem_Upkg">
-    <children xmi:type="notation:DecorationNode" xmi:id="_eLqKcBYsEeOb86bem_Upkg" type="6001">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_eLqKcRYsEeOb86bem_Upkg" y="40"/>
-    </children>
-    <styles xmi:type="notation:RoutingStyle" xmi:id="_eLo8UBYsEeOb86bem_Upkg"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_eLo8URYsEeOb86bem_Upkg" fontName="Ubuntu"/>
-    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.8"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eLo8UhYsEeOb86bem_Upkg" points="[60, -2, -139, -2]$[259, -2, 60, -2]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_eogegBYsEeOb86bem_Upkg" type="4001" source="_SGSUEBYsEeOb86bem_Upkg" target="_TyNz8BPHEeOwHtNc_jOQaw">
+  <edges xmi:type="notation:Edge" xmi:id="_eogegBYsEeOb86bem_Upkg" type="4001" source="_S0E_YBb2EeO9qcE0l8gKkQ" target="_TyNz8BPHEeOwHtNc_jOQaw">
     <children xmi:type="notation:DecorationNode" xmi:id="_eohFkBYsEeOb86bem_Upkg" type="6001">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_eohFkRYsEeOb86bem_Upkg" y="40"/>
     </children>
     <styles xmi:type="notation:RoutingStyle" xmi:id="_eogegRYsEeOb86bem_Upkg"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_eogeghYsEeOb86bem_Upkg" fontName="Ubuntu"/>
-    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.9"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.8"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eogegxYsEeOb86bem_Upkg" points="[60, 19, -92, -33]$[157, 32, 5, -20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_USrEUBb2EeO9qcE0l8gKkQ" id="(0.9416666666666667,0.6)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_VRD_MBb2EeO9qcE0l8gKkQ" type="4001" source="_SGSUEBYsEeOb86bem_Upkg" target="_AkNyIBb1EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_VREmQxb2EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_VREmRBb2EeO9qcE0l8gKkQ" y="11"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_VREmQBb2EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_VREmQRb2EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.9"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VREmQhb2EeO9qcE0l8gKkQ" points="[0, 40, 715, -135]$[0, 90, 715, -85]$[-715, 90, 0, -85]$[-715, 135, 0, -40]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VRHpkBb2EeO9qcE0l8gKkQ" id="(0.8583333333333333,0.5)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_V4ytkBb2EeO9qcE0l8gKkQ" type="4001" source="_AkNyIBb1EeO9qcE0l8gKkQ" target="_ZzZ-cBb1EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_V4z7sBb2EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_V4z7sRb2EeO9qcE0l8gKkQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_V4ytkRb2EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_V4ytkhb2EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.10"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_V4ytkxb2EeO9qcE0l8gKkQ" points="[20, 6, -91, 0]$[96, 12, -15, 6]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V43mEBb2EeO9qcE0l8gKkQ" id="(0.8333333333333334,0.6625)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V43mERb2EeO9qcE0l8gKkQ" id="(0.12295081967213115,0.7375)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_W02tMBb2EeO9qcE0l8gKkQ" type="4001" source="_kJfBcBb1EeO9qcE0l8gKkQ" target="_l98BoBb1EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_W03UQBb2EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_W03UQRb2EeO9qcE0l8gKkQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_W02tMRb2EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_W02tMhb2EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.11"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_W02tMxb2EeO9qcE0l8gKkQ" points="[61, 5, -142, 7]$[249, 38, 46, 40]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_XmovcBb2EeO9qcE0l8gKkQ" type="4001" source="_l98BoBb1EeO9qcE0l8gKkQ" target="_NcEY4Bb2EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_XmpWgBb2EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_XmpWgRb2EeO9qcE0l8gKkQ" x="-3" y="16"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_XmovcRb2EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Xmovchb2EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.12"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Xmovcxb2EeO9qcE0l8gKkQ" points="[0, 40, 840, -135]$[0, 111, 840, -64]$[-840, 111, 0, -64]$[-840, 135, 0, -40]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_YNpsIBb2EeO9qcE0l8gKkQ" type="4001" source="_NcEY4Bb2EeO9qcE0l8gKkQ" target="_IOdrkBb2EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YNqTMBb2EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_YNqTMRb2EeO9qcE0l8gKkQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_YNpsIRb2EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YNpsIhb2EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.13"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YNpsIxb2EeO9qcE0l8gKkQ" points="[60, 7, -156, 7]$[150, 7, -66, 7]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Y9jfEBb2EeO9qcE0l8gKkQ" type="4001" source="_IOdrkBb2EeO9qcE0l8gKkQ" target="_4IZm8Bb1EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Y9jfFBb2EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Y9jfFRb2EeO9qcE0l8gKkQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Y9jfERb2EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Y9jfEhb2EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.14"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Y9jfExb2EeO9qcE0l8gKkQ" points="[67, -1, -127, -1]$[188, -40, -6, -40]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ZbafwBb2EeO9qcE0l8gKkQ" type="4001" source="_4IZm8Bb1EeO9qcE0l8gKkQ" target="_S0E_YBb2EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ZbbG0Bb2EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbbG0Rb2EeO9qcE0l8gKkQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_ZbafwRb2EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Zbafwhb2EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.15"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zbafwxb2EeO9qcE0l8gKkQ" points="[25, 0, -98, 0]$[99, -1, -24, -1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZbdjEBb2EeO9qcE0l8gKkQ" id="(0.8062015503875969,0.4875)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZbdjERb2EeO9qcE0l8gKkQ" id="(0.2,0.4875)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_7HFwMBb2EeO9qcE0l8gKkQ" type="4001" source="_1HfWkBPHEeOwHtNc_jOQaw" target="_3QTr4Bb2EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_7HFwNBb2EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7HFwNRb2EeO9qcE0l8gKkQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_7HFwMRb2EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_7HFwMhb2EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.16"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7HFwMxb2EeO9qcE0l8gKkQ" points="[60, -6, -142, -1]$[137, -6, -65, -1]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Hi5JkBb3EeO9qcE0l8gKkQ" type="4001" source="_ZzZ-cBb1EeO9qcE0l8gKkQ" target="_AhSvEBb3EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Hi5JlBb3EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Hi5woBb3EeO9qcE0l8gKkQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Hi5JkRb3EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Hi5Jkhb3EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.17"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Hi5Jkxb3EeO9qcE0l8gKkQ" points="[61, -19, -146, 23]$[142, -68, -65, -26]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ICrc4Bb3EeO9qcE0l8gKkQ" type="4001" source="_AhSvEBb3EeO9qcE0l8gKkQ" target="_kJfBcBb1EeO9qcE0l8gKkQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ICsrABb3EeO9qcE0l8gKkQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ICsrARb3EeO9qcE0l8gKkQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_ICsD8Bb3EeO9qcE0l8gKkQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ICsD8Rb3EeO9qcE0l8gKkQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.18"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ICsD8hb3EeO9qcE0l8gKkQ" points="[65, 12, -189, -25]$[194, 47, -60, 10]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9XzT8BcJEeO03P0Ra0M9AQ" type="4001" source="_sRQ1UBSOEeO2WIW58ID4KA" target="_5LMJkBcJEeO03P0Ra0M9AQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_9Xz7ABcJEeO03P0Ra0M9AQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9Xz7ARcJEeO03P0Ra0M9AQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_9XzT8RcJEeO03P0Ra0M9AQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9XzT8hcJEeO03P0Ra0M9AQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.19"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9XzT8xcJEeO03P0Ra0M9AQ" points="[60, -5, -129, 2]$[129, -12, -60, -5]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9-qfoBcJEeO03P0Ra0M9AQ" type="4001" source="_5LMJkBcJEeO03P0Ra0M9AQ" target="_SGSUEBYsEeOb86bem_Upkg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_9-rGsBcJEeO03P0Ra0M9AQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9-rGsRcJEeO03P0Ra0M9AQ" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_9-qfoRcJEeO03P0Ra0M9AQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9-qfohcJEeO03P0Ra0M9AQ" fontName="Ubuntu"/>
+    <element xmi:type="smach:SMACHTransition" href="logistic_scenario.ros_coordinator#//@node.0/@transitions.20"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9-qfoxcJEeO03P0Ra0M9AQ" points="[60, 6, -122, -8]$[177, -26, -5, -40]"/>
   </edges>
 </notation:Diagram>

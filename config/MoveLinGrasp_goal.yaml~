@@ -1,0 +1,22 @@
+#Generated once for configuration of goals
+#Config config/MoveLinGrasp_goal.yaml
+target_frame: 'arm_ee_link'
+goal_pose:
+  header:
+    seq: 0
+    stamp:
+      secs: 0
+      nsecs: 0
+    frame_id: 'arm_ee_link'
+  pose:
+    position:
+      x: 0.05
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: -0.064954
+      w: 0.997888
+linVel: 0.0
+

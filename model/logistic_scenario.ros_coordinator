@@ -4,22 +4,44 @@
     <actionclient xsi:type="smach:ActionState" name="MoveHomePTP" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveHomePTP" remap_overwrite="/MovePTP"/>
     <actionclient xsi:type="smach:ActionState" name="MoveBaseHome" ActionType="move_base_msgs::MoveBase" goal="/logistic_scenario_app/MoveBaseHome" remap_overwrite="/move_base"/>
     <actionclient xsi:type="smach:ActionState" name="MoveBaseShelf" ActionType="move_base_msgs::MoveBase" goal="/logistic_scenario_app/MoveBaseShelf" remap_overwrite="/move_base"/>
-    <actionclient xsi:type="smach:ActionState" name="DetectObjects" ActionType="cob_object_detection_msgs::DetectObjects" goal="/logistic_scenario_app/DetectObjects" remap_overwrite="/cob_marker/object_recognition"/>
+    <actionclient xsi:type="smach:ActionState" name="DetectObjectsShelf" ActionType="cob_object_detection_msgs::DetectObjects" goal="/logistic_scenario_app/DetectObjects" remap_overwrite="/cob_marker/object_detection"/>
     <actionclient xsi:type="smach:ActionState" name="MoveObjectPTP" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveObjectPTP" remap_overwrite="/MovePTP"/>
     <actionclient xsi:type="smach:ActionState" name="MoveLinGrasp" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinGrasp" remap_overwrite="/MoveLin"/>
     <actionclient xsi:type="smach:ActionState" name="MoveLinGraspUp" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinGraspUp" remap_overwrite="/MoveLin"/>
     <actionclient xsi:type="smach:ActionState" name="MoveLinGraspBack" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinGraspBack" remap_overwrite="/MoveLin"/>
     <actionclient xsi:type="smach:ActionState" name="MoveToRobotDeck" ActionType="control_msgs::FollowJointTrajectory" goal="/logistic_scenario_app/MoveToRobotDeck" remap_overwrite="/arm_controller/follow_joint_trajectory/"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveBaseDeliver" ActionType="move_base_msgs::MoveBase" goal="/logistic_scenario_app/MoveBaseDeliver" remap_overwrite="/move_base"/>
+    <actionclient xsi:type="smach:ActionState" name="GetFromRobotDeck" ActionType="control_msgs::FollowJointTrajectory" goal="/logistic_scenario_app/GetFromRobotDeck" remap_overwrite="/arm_controller/follow_joint_trajectory/"/>
+    <actionclient xsi:type="smach:ActionState" name="DetectObjectsDeliver" ActionType="cob_object_detection_msgs::DetectObjects" goal="/logistic_scenario_app/DetectObjects" remap_overwrite="/cob_marker/object_detection"/>
+    <actionclient xsi:type="smach:ActionState" name="MovePTPDeliver" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MovePTPDeliver" remap_overwrite="/MovePTP"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveLinDeliverBack" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinDeliverBack" remap_overwrite="/MoveLin"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveLinDeliverDown" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinDeliverDown" remap_overwrite="/MoveLin"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveLinDeliver" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinDeliver" remap_overwrite="/MoveLin"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveBaseHomeEnd" ActionType="move_base_msgs::MoveBase" goal="/logistic_scenario_app/MoveBaseHome" remap_overwrite="/move_base"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveToNeutralFrontGrasp" ActionType="control_msgs::FollowJointTrajectory" goal="/logistic_scenario_app/MoveToNeutralFront" remap_overwrite="/arm_controller/follow_joint_trajectory/"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveToNeutralFrontDeliver" ActionType="control_msgs::FollowJointTrajectory" goal="/logistic_scenario_app/MoveToNeutralFront" remap_overwrite="/arm_controller/follow_joint_trajectory/"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveLinPreNeutral" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinPreNeutral" remap_overwrite="/MoveLin"/>
     <transitions Source="//@node.0/@initialStates.0" Target="//@node.0/@actionclient.0"/>
     <transitions Source="//@node.0/@actionclient.0" Target="//@node.0/@actionclient.1"/>
     <transitions Source="//@node.0/@actionclient.1" Target="//@node.0/@actionclient.2"/>
-    <transitions Source="//@node.0/@actionclient.2" Target="//@node.0/@actionclient.3"/>
+    <transitions Source="//@node.0/@actionclient.17" Target="//@node.0/@actionclient.3"/>
     <transitions Source="//@node.0/@actionclient.3" Target="//@node.0/@actionclient.4"/>
     <transitions Source="//@node.0/@actionclient.4" Target="//@node.0/@actionclient.5"/>
     <transitions Source="//@node.0/@actionclient.6" Target="//@node.0/@actionclient.7"/>
     <transitions Source="//@node.0/@actionclient.5" Target="//@node.0/@actionclient.6"/>
-    <transitions Source="//@node.0/@actionclient.7" Target="//@node.0/@actionclient.8"/>
-    <transitions Source="//@node.0/@actionclient.8" Target="//@node.0/@finalStates.0"/>
+    <transitions Source="//@node.0/@actionclient.16" Target="//@node.0/@finalStates.0"/>
+    <transitions Source="//@node.0/@actionclient.8" Target="//@node.0/@actionclient.9"/>
+    <transitions Source="//@node.0/@actionclient.9" Target="//@node.0/@actionclient.10"/>
+    <transitions Source="//@node.0/@actionclient.11" Target="//@node.0/@actionclient.12"/>
+    <transitions Source="//@node.0/@actionclient.12" Target="//@node.0/@actionclient.15"/>
+    <transitions Source="//@node.0/@actionclient.15" Target="//@node.0/@actionclient.14"/>
+    <transitions Source="//@node.0/@actionclient.14" Target="//@node.0/@actionclient.13"/>
+    <transitions Source="//@node.0/@actionclient.13" Target="//@node.0/@actionclient.16"/>
+    <transitions Source="//@node.0/@actionclient.2" Target="//@node.0/@actionclient.17"/>
+    <transitions Source="//@node.0/@actionclient.10" Target="//@node.0/@actionclient.18"/>
+    <transitions Source="//@node.0/@actionclient.18" Target="//@node.0/@actionclient.11"/>
+    <transitions Source="//@node.0/@actionclient.7" Target="//@node.0/@actionclient.19"/>
+    <transitions Source="//@node.0/@actionclient.19" Target="//@node.0/@actionclient.8"/>
     <finalStates/>
     <initialStates/>
   </node>

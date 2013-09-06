@@ -1,0 +1,58 @@
+#Generated once for configuration of goals
+#Config config/MoveToRobotDeck_goal.yaml
+trajectory: 
+  header: 
+    seq: 0
+    stamp: 
+      secs: 1378389606
+      nsecs: 333532094
+    frame_id: ''
+  joint_names: ['arm_shoulder_pan_joint', 'arm_shoulder_lift_joint', 'arm_elbow_joint', 'arm_wrist_1_joint', 'arm_wrist_2_joint', 'arm_wrist_3_joint']
+  points: 
+    - 
+      positions: [-3.1398, -1.6307, -2.0107, -2.5457, 0.8096, 1.4929]
+      velocities: [0, 0, 0, 0, 0, 0]
+      accelerations: []
+      time_from_start: 
+        secs: 3
+        nsecs: 0
+    - 
+      positions: [-3.4196, -2.3218, -1.9677, -1.8812, 0.544, 1.4439]
+      velocities: [0, 0, 0, 0, 0, 0]
+      accelerations: []
+      time_from_start: 
+        secs: 6
+        nsecs: 0
+    - 
+      positions: [-3.5413, -2.3183, -1.9973, -1.8815, 0.4145, 1.479]
+      velocities: [0, 0, 0, 0, 0, 0]
+      accelerations: []
+      time_from_start: 
+        secs: 9
+        nsecs: 0
+    - 
+      positions: [-3.5414, -2.0156, -1.9813, -2.2066, 0.4139, 1.4775]
+      velocities: [0, 0, 0, 0, 0, 0]
+      accelerations: []
+      time_from_start: 
+        secs: 12
+        nsecs: 0
+    - 
+      positions: [-3.1398, -1.6307, -2.0107, -2.5457, 0.8096, 1.4929]
+      velocities: [0, 0, 0, 0, 0, 0]
+      accelerations: []
+      time_from_start: 
+        secs: 15
+        nsecs: 0
+    - 
+      positions: [-3.9861, -1.4593, -2.2612, -2.4284, -1.6017, 1.585]
+      velocities: [0, 0, 0, 0, 0, 0]
+      accelerations: []
+      time_from_start: 
+        secs: 18
+        nsecs: 0
+path_tolerance: []
+goal_tolerance: []
+goal_time_tolerance: 
+  secs: 0
+  nsecs: 0
