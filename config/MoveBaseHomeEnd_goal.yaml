@@ -1,22 +1,19 @@
 #Generated once for configuration of goals
-#Config config/MoveLinGrasp_goal.yaml
-target_frame: 'gripper_link'
-goal_pose:
+#Config config/MoveBaseHomeEnd_goal.yaml
+target_pose:
   header:
     seq: 0
     stamp:
       secs: 0
       nsecs: 0
-    frame_id: 'gripper_link'
+    frame_id: ''
   pose:
     position:
-      x: 0.11
+      x: 0.0
       y: 0.0
       z: 0.0
     orientation:
       x: 0.0
       y: 0.0
-      z: 0.129634
-      w: 0.991562
-linVel: 0.0
-
+      z: 0.0
+      w: 0.0

@@ -15,6 +15,17 @@ from prace_primitives.msg import MoveLinAction, MoveLinGoal
 from prace_primitives.msg import MoveLinAction, MoveLinGoal
 from prace_primitives.msg import MoveLinAction, MoveLinGoal
 from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
+from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
+from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
+from cob_object_detection_msgs.msg import DetectObjectsAction, DetectObjectsGoal
+from prace_primitives.msg import MoveLinAction, MoveLinGoal
+from prace_primitives.msg import MoveLinAction, MoveLinGoal
+from prace_primitives.msg import MoveLinAction, MoveLinGoal
+from prace_primitives.msg import MoveLinAction, MoveLinGoal
+from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
+from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
+from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
+from prace_primitives.msg import MoveLinAction, MoveLinGoal
 
 
 # protected region customHeaders on begin #
@@ -31,8 +42,8 @@ class logistic_scenario_app_impl:
 		genpy.message.fill_message_args(self.MoveBaseHome_goal, [rospy.get_param('/logistic_scenario_app/MoveBaseHome')])
 		self.MoveBaseShelf_goal = MoveBaseGoal()
 		genpy.message.fill_message_args(self.MoveBaseShelf_goal, [rospy.get_param('/logistic_scenario_app/MoveBaseShelf')])
-		self.DetectObjects_goal = DetectObjectsGoal()
-		genpy.message.fill_message_args(self.DetectObjects_goal, [rospy.get_param('/logistic_scenario_app/DetectObjects')])
+		self.DetectObjectsShelf_goal = DetectObjectsGoal()
+		genpy.message.fill_message_args(self.DetectObjectsShelf_goal, [rospy.get_param('/logistic_scenario_app/DetectObjects')])
 		self.MoveObjectPTP_goal = MoveLinGoal()
 		genpy.message.fill_message_args(self.MoveObjectPTP_goal, [rospy.get_param('/logistic_scenario_app/MoveObjectPTP')])
 		self.MoveLinGrasp_goal = MoveLinGoal()
@@ -43,6 +54,28 @@ class logistic_scenario_app_impl:
 		genpy.message.fill_message_args(self.MoveLinGraspBack_goal, [rospy.get_param('/logistic_scenario_app/MoveLinGraspBack')])
 		self.MoveToRobotDeck_goal = FollowJointTrajectoryGoal()
 		genpy.message.fill_message_args(self.MoveToRobotDeck_goal, [rospy.get_param('/logistic_scenario_app/MoveToRobotDeck')])
+		self.MoveBaseDeliver_goal = MoveBaseGoal()
+		genpy.message.fill_message_args(self.MoveBaseDeliver_goal, [rospy.get_param('/logistic_scenario_app/MoveBaseDeliver')])
+		self.GetFromRobotDeck_goal = FollowJointTrajectoryGoal()
+		genpy.message.fill_message_args(self.GetFromRobotDeck_goal, [rospy.get_param('/logistic_scenario_app/GetFromRobotDeck')])
+		self.DetectObjectsDeliver_goal = DetectObjectsGoal()
+		genpy.message.fill_message_args(self.DetectObjectsDeliver_goal, [rospy.get_param('/logistic_scenario_app/DetectObjects')])
+		self.MovePTPDeliver_goal = MoveLinGoal()
+		genpy.message.fill_message_args(self.MovePTPDeliver_goal, [rospy.get_param('/logistic_scenario_app/MovePTPDeliver')])
+		self.MoveLinDeliverBack_goal = MoveLinGoal()
+		genpy.message.fill_message_args(self.MoveLinDeliverBack_goal, [rospy.get_param('/logistic_scenario_app/MoveLinDeliverBack')])
+		self.MoveLinDeliverDown_goal = MoveLinGoal()
+		genpy.message.fill_message_args(self.MoveLinDeliverDown_goal, [rospy.get_param('/logistic_scenario_app/MoveLinDeliverDown')])
+		self.MoveLinDeliver_goal = MoveLinGoal()
+		genpy.message.fill_message_args(self.MoveLinDeliver_goal, [rospy.get_param('/logistic_scenario_app/MoveLinDeliver')])
+		self.MoveBaseHomeEnd_goal = MoveBaseGoal()
+		genpy.message.fill_message_args(self.MoveBaseHomeEnd_goal, [rospy.get_param('/logistic_scenario_app/MoveBaseHome')])
+		self.MoveToNeutralFrontGrasp_goal = FollowJointTrajectoryGoal()
+		genpy.message.fill_message_args(self.MoveToNeutralFrontGrasp_goal, [rospy.get_param('/logistic_scenario_app/MoveToNeutralFront')])
+		self.MoveToNeutralFrontDeliver_goal = FollowJointTrajectoryGoal()
+		genpy.message.fill_message_args(self.MoveToNeutralFrontDeliver_goal, [rospy.get_param('/logistic_scenario_app/MoveToNeutralFront')])
+		self.MoveLinPreNeutral_goal = MoveLinGoal()
+		genpy.message.fill_message_args(self.MoveLinPreNeutral_goal, [rospy.get_param('/logistic_scenario_app/MoveLinPreNeutral')])
 	
 		# protected region initCode on begin #
         # protected region initCode end #
@@ -60,9 +93,9 @@ class logistic_scenario_app_impl:
 				"succeeded":"MoveBaseShelf",
 			})
 			smach.StateMachine.add('MoveBaseShelf', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseShelf_goal), {
-				"succeeded":"DetectObjects",
+				"succeeded":"MoveToNeutralFrontGrasp",
 			})
-			smach.StateMachine.add('DetectObjects', smach_ros.SimpleActionState('/cob_marker/object_recognition', DetectObjectsAction, self.DetectObjects_goal), {
+			smach.StateMachine.add('DetectObjectsShelf', smach_ros.SimpleActionState('/cob_marker/object_detection', DetectObjectsAction, self.DetectObjectsShelf_goal), {
 				"succeeded":"MoveObjectPTP",
 			})
 			smach.StateMachine.add('MoveObjectPTP', smach_ros.SimpleActionState('/MovePTP', MoveLinAction, self.MoveObjectPTP_goal), {
@@ -75,10 +108,43 @@ class logistic_scenario_app_impl:
 				"succeeded":"MoveLinGraspBack",
 			})
 			smach.StateMachine.add('MoveLinGraspBack', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinGraspBack_goal), {
-				"succeeded":"MoveToRobotDeck",
+				"succeeded":"MoveLinPreNeutral",
 			})
 			smach.StateMachine.add('MoveToRobotDeck', smach_ros.SimpleActionState('/arm_controller/follow_joint_trajectory/', FollowJointTrajectoryAction, self.MoveToRobotDeck_goal), {
+				"succeeded":"MoveBaseDeliver",
+			})
+			smach.StateMachine.add('MoveBaseDeliver', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseDeliver_goal), {
+				"succeeded":"GetFromRobotDeck",
+			})
+			smach.StateMachine.add('GetFromRobotDeck', smach_ros.SimpleActionState('/arm_controller/follow_joint_trajectory/', FollowJointTrajectoryAction, self.GetFromRobotDeck_goal), {
+				"succeeded":"MoveToNeutralFrontDeliver",
+			})
+			smach.StateMachine.add('DetectObjectsDeliver', smach_ros.SimpleActionState('/cob_marker/object_detection', DetectObjectsAction, self.DetectObjectsDeliver_goal), {
+				"succeeded":"MovePTPDeliver",
+			})
+			smach.StateMachine.add('MovePTPDeliver', smach_ros.SimpleActionState('/MovePTP', MoveLinAction, self.MovePTPDeliver_goal), {
+				"succeeded":"MoveLinDeliver",
+			})
+			smach.StateMachine.add('MoveLinDeliverBack', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinDeliverBack_goal), {
+				"succeeded":"MoveBaseHomeEnd",
+			})
+			smach.StateMachine.add('MoveLinDeliverDown', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinDeliverDown_goal), {
+				"succeeded":"MoveLinDeliverBack",
+			})
+			smach.StateMachine.add('MoveLinDeliver', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinDeliver_goal), {
+				"succeeded":"MoveLinDeliverDown",
+			})
+			smach.StateMachine.add('MoveBaseHomeEnd', smach_ros.SimpleActionState('/move_base', MoveBaseAction, self.MoveBaseHomeEnd_goal), {
 				"succeeded":"succeeded",
+			})
+			smach.StateMachine.add('MoveToNeutralFrontGrasp', smach_ros.SimpleActionState('/arm_controller/follow_joint_trajectory/', FollowJointTrajectoryAction, self.MoveToNeutralFrontGrasp_goal), {
+				"succeeded":"DetectObjectsShelf",
+			})
+			smach.StateMachine.add('MoveToNeutralFrontDeliver', smach_ros.SimpleActionState('/arm_controller/follow_joint_trajectory/', FollowJointTrajectoryAction, self.MoveToNeutralFrontDeliver_goal), {
+				"succeeded":"DetectObjectsDeliver",
+			})
+			smach.StateMachine.add('MoveLinPreNeutral', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinPreNeutral_goal), {
+				"succeeded":"MoveToRobotDeck",
 			})
 	
 

@@ -1,5 +1,5 @@
 #Generated once for configuration of goals
-#Config config/MoveLinGrasp_goal.yaml
+#Config config/MoveLinDeliver_goal.yaml
 target_frame: 'gripper_link'
 goal_pose:
   header:
@@ -10,13 +10,12 @@ goal_pose:
     frame_id: 'gripper_link'
   pose:
     position:
-      x: 0.11
+      x: 0.20
       y: 0.0
       z: 0.0
     orientation:
       x: 0.0
       y: 0.0
-      z: 0.129634
-      w: 0.991562
+      z: 0.0
+      w: 1.0
 linVel: 0.0
-

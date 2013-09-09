@@ -10,12 +10,12 @@ goal_pose:
     frame_id: 'gripper_link'
   pose:
     position:
-      x: -0.30
+      x: -0.4
       y: 0.0
       z: 0.0
     orientation:
       x: 0.0
       y: 0.0
-      z: 0.064954
-      w: 0.997888
+      z: 0.0
+      w: 1.0
 linVel: 0.0

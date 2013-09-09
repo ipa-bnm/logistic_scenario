@@ -1,3 +1,5 @@
+#Generated once for configuration of goals
+#Config config/MoveBaseDeliver_goal.yaml
 target_pose:
   header:
     seq: 0
@@ -7,11 +9,12 @@ target_pose:
     frame_id: '/map'
   pose:
     position:
-      x: 0.483
-      y: -1.11
+      x: 3.358
+      y: 0.549
       z: 0.0
     orientation:
       x: 0.0
       y: 0.0
-      z: 0.904
-      w: -0.427
+      z: -0.142
+      w: 0.990
+      

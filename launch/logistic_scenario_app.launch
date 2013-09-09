@@ -13,6 +13,15 @@
   <rosparam command="load" ns="/logistic_scenario_app/MoveLinGraspUp" file="$(find logistic_scenario)/config/MoveLinGraspUp_goal.yaml"/>
   <rosparam command="load" ns="/logistic_scenario_app/MoveLinGraspBack" file="$(find logistic_scenario)/config/MoveLinGraspBack_goal.yaml"/>
   <rosparam command="load" ns="/logistic_scenario_app/MoveToRobotDeck" file="$(find logistic_scenario)/config/MoveToRobotDeck_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveToNeutralFront" file="$(find logistic_scenario)/config/MoveToNeutralFront_goal.yaml"/>
+  
+  <rosparam command="load" ns="/logistic_scenario_app/GetFromRobotDeck" file="$(find logistic_scenario)/config/GetFromRobotDeck_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveBaseDeliver" file="$(find logistic_scenario)/config/MoveBaseDeliver_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveLinDeliver" file="$(find logistic_scenario)/config/MoveLinDeliver_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveLinDeliverBack" file="$(find logistic_scenario)/config/MoveLinDeliverBack_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveLinDeliverDown" file="$(find logistic_scenario)/config/MoveLinDeliverDown_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveLinPreNeutral" file="$(find logistic_scenario)/config/MoveLinPreNeutral_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MovePTPDeliver" file="$(find logistic_scenario)/config/MovePTPDeliver_goal.yaml"/>
   
   <node name="logistic_scenario_app" pkg="logistic_scenario" type="logistic_scenario_app" output="screen"/>
 
