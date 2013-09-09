@@ -14,6 +14,9 @@
   <rosparam command="load" ns="/logistic_scenario_app/MoveLinGraspBack" file="$(find logistic_scenario)/config/MoveLinGraspBack_goal.yaml"/>
   <rosparam command="load" ns="/logistic_scenario_app/MoveToRobotDeck" file="$(find logistic_scenario)/config/MoveToRobotDeck_goal.yaml"/>
   <rosparam command="load" ns="/logistic_scenario_app/MoveToNeutralFront" file="$(find logistic_scenario)/config/MoveToNeutralFront_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveToNeutralFrontGrasp" file="$(find logistic_scenario)/config/MoveToNeutralFrontGrasp_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveToNeutralFrontDeliver" file="$(find logistic_scenario)/config/MoveToNeutralFrontDeliver_goal.yaml"/>
+  <rosparam command="load" ns="/logistic_scenario_app/MoveToHome" file="$(find logistic_scenario)/config/MoveToHome_goal.yaml"/>
   
   <rosparam command="load" ns="/logistic_scenario_app/GetFromRobotDeck" file="$(find logistic_scenario)/config/GetFromRobotDeck_goal.yaml"/>
   <rosparam command="load" ns="/logistic_scenario_app/MoveBaseDeliver" file="$(find logistic_scenario)/config/MoveBaseDeliver_goal.yaml"/>

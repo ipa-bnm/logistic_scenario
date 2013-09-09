@@ -26,6 +26,7 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
 from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
 from prace_primitives.msg import MoveLinAction, MoveLinGoal
+from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
 
 
 # protected region customHeaders on begin #
@@ -76,6 +77,8 @@ class logistic_scenario_app_impl:
 		genpy.message.fill_message_args(self.MoveToNeutralFrontDeliver_goal, [rospy.get_param('/logistic_scenario_app/MoveToNeutralFront')])
 		self.MoveLinPreNeutral_goal = MoveLinGoal()
 		genpy.message.fill_message_args(self.MoveLinPreNeutral_goal, [rospy.get_param('/logistic_scenario_app/MoveLinPreNeutral')])
+		self.MoveToHome_goal = FollowJointTrajectoryGoal()
+		genpy.message.fill_message_args(self.MoveToHome_goal, [rospy.get_param('/logistic_scenario_app/MoveToHome')])
 	
 		# protected region initCode on begin #
         # protected region initCode end #
@@ -126,7 +129,7 @@ class logistic_scenario_app_impl:
 				"succeeded":"MoveLinDeliver",
 			})
 			smach.StateMachine.add('MoveLinDeliverBack', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinDeliverBack_goal), {
-				"succeeded":"MoveBaseHomeEnd",
+				"succeeded":"MoveToHome",
 			})
 			smach.StateMachine.add('MoveLinDeliverDown', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinDeliverDown_goal), {
 				"succeeded":"MoveLinDeliverBack",
@@ -145,6 +148,9 @@ class logistic_scenario_app_impl:
 			})
 			smach.StateMachine.add('MoveLinPreNeutral', smach_ros.SimpleActionState('/MoveLin', MoveLinAction, self.MoveLinPreNeutral_goal), {
 				"succeeded":"MoveToRobotDeck",
+			})
+			smach.StateMachine.add('MoveToHome', smach_ros.SimpleActionState('/arm_controller/follow_joint_trajectory/', FollowJointTrajectoryAction, self.MoveToHome_goal), {
+				"succeeded":"MoveBaseHomeEnd",
 			})
 	
 

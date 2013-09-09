@@ -21,6 +21,7 @@
     <actionclient xsi:type="smach:ActionState" name="MoveToNeutralFrontGrasp" ActionType="control_msgs::FollowJointTrajectory" goal="/logistic_scenario_app/MoveToNeutralFront" remap_overwrite="/arm_controller/follow_joint_trajectory/"/>
     <actionclient xsi:type="smach:ActionState" name="MoveToNeutralFrontDeliver" ActionType="control_msgs::FollowJointTrajectory" goal="/logistic_scenario_app/MoveToNeutralFront" remap_overwrite="/arm_controller/follow_joint_trajectory/"/>
     <actionclient xsi:type="smach:ActionState" name="MoveLinPreNeutral" ActionType="prace_primitives::MoveLin" goal="/logistic_scenario_app/MoveLinPreNeutral" remap_overwrite="/MoveLin"/>
+    <actionclient xsi:type="smach:ActionState" name="MoveToHome" ActionType="control_msgs::FollowJointTrajectory" goal="/logistic_scenario_app/MoveToHome" remap_overwrite="/arm_controller/follow_joint_trajectory/"/>
     <transitions Source="//@node.0/@initialStates.0" Target="//@node.0/@actionclient.0"/>
     <transitions Source="//@node.0/@actionclient.0" Target="//@node.0/@actionclient.1"/>
     <transitions Source="//@node.0/@actionclient.1" Target="//@node.0/@actionclient.2"/>
@@ -36,12 +37,13 @@
     <transitions Source="//@node.0/@actionclient.12" Target="//@node.0/@actionclient.15"/>
     <transitions Source="//@node.0/@actionclient.15" Target="//@node.0/@actionclient.14"/>
     <transitions Source="//@node.0/@actionclient.14" Target="//@node.0/@actionclient.13"/>
-    <transitions Source="//@node.0/@actionclient.13" Target="//@node.0/@actionclient.16"/>
     <transitions Source="//@node.0/@actionclient.2" Target="//@node.0/@actionclient.17"/>
     <transitions Source="//@node.0/@actionclient.10" Target="//@node.0/@actionclient.18"/>
     <transitions Source="//@node.0/@actionclient.18" Target="//@node.0/@actionclient.11"/>
     <transitions Source="//@node.0/@actionclient.7" Target="//@node.0/@actionclient.19"/>
     <transitions Source="//@node.0/@actionclient.19" Target="//@node.0/@actionclient.8"/>
+    <transitions Source="//@node.0/@actionclient.13" Target="//@node.0/@actionclient.20"/>
+    <transitions Source="//@node.0/@actionclient.20" Target="//@node.0/@actionclient.16"/>
     <finalStates/>
     <initialStates/>
   </node>
