@@ -1,34 +1,23 @@
 #Generated once for configuration of goals
-#Config config/MoveToNeutralFrontDeliver_goal.yaml
-trajectory:
-  header:
+#Config config/MoveToNeutralFront.yaml
+trajectory: 
+  header: 
     seq: 0
-    stamp:
+    stamp: 
       secs: 0
       nsecs: 0
     frame_id: ''
-  joint_names:
-  - ''
-  points:
-  - positions:
-    - 0
-    velocities:
-    - 0
-    accelerations:
-    - 0
-    time_from_start:
-      secs: 0
-      nsecs: 0
-path_tolerance:
-- name: ''
-  position: 0.0
-  velocity: 0.0
-  acceleration: 0.0
-goal_tolerance:
-- name: ''
-  position: 0.0
-  velocity: 0.0
-  acceleration: 0.0
-goal_time_tolerance:
+  joint_names: ['arm_shoulder_pan_joint', 'arm_shoulder_lift_joint', 'arm_elbow_joint', 'arm_wrist_1_joint', 'arm_wrist_2_joint', 'arm_wrist_3_joint']
+  points: 
+    - 
+      positions: [-0.8318, -0.8411, -2.0439, -3.1566, -1.6002, 1.5766]
+      velocities: [0, 0, 0, 0, 0, 0]
+      accelerations: []
+      time_from_start: 
+        secs: 3
+        nsecs: 0
+path_tolerance: []
+goal_tolerance: []
+goal_time_tolerance: 
   secs: 0
   nsecs: 0

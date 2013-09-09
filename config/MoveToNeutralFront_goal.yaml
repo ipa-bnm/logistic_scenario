@@ -1,5 +1,5 @@
 #Generated once for configuration of goals
-#Config config/MoveToRobotDeck_goal.yaml
+#Config config/MoveToNeutralFront.yaml
 trajectory: 
   header: 
     seq: 0
