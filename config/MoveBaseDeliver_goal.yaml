@@ -9,12 +9,12 @@ target_pose:
     frame_id: '/map'
   pose:
     position:
-      x: 3.358
-      y: 0.549
+      x: 3.402
+      y: 0.404
       z: 0.0
     orientation:
       x: 0.0
       y: 0.0
-      z: -0.142
-      w: 0.990
+      z: -0.129
+      w: 0.992
       
