@@ -11,8 +11,8 @@ goal_pose:
   pose:
     position:
       x: 0.0
-      y: -0.225
-      z: -0.3
+      y: -0.235
+      z: -0.30
     orientation:
       x: 0.0
       y: -0.707106
